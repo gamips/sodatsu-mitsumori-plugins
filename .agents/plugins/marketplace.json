@@ -1,0 +1,20 @@
+{
+  "name": "sodatsu-mitsumori-plugins",
+  "interface": {
+    "displayName": "育つ見積"
+  },
+  "plugins": [
+    {
+      "name": "sodatsu-mitsumori",
+      "source": {
+        "source": "local",
+        "path": "./openai"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sodatsu-mitsumori",
+  "version": "0.1.0",
+  "description": "Create and edit quotes and invoices in Sodatsu Mitsumori, retrieve PDFs and share links, and work with your item catalog and settings.",
+  "author": {
+    "name": "株式会社ガミ",
+    "email": "customer@sodatsu-mitsumori.net",
+    "url": "https://sodatsu-mitsumori.net/aboutus/"
+  },
+  "homepage": "https://sodatsu-mitsumori.net/features/external-ai-mcp/",
+  "repository": "https://github.com/gamips/sodatsu-mitsumori-plugins",
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "育つ見積",
+        "shortDescription": "育つ見積で見積書・請求書を作成・編集",
+        "longDescription": "育つ見積に接続して、見積書・請求書などを作成・編集できます。PDFや共有URLの取得、品目マスターや設定の操作にも対応しています。",
+        "developerName": "株式会社ガミ",
+        "category": "Productivity",
+        "capabilities": [
+          "書類の作成・編集",
+          "PDF取得",
+          "共有URL",
+          "品目マスター",
+          "設定"
+        ],
+        "websiteURL": "https://sodatsu-mitsumori.net/features/external-ai-mcp/",
+        "supportURL": "https://sodatsu-mitsumori.net/aboutus/",
+        "privacyPolicyURL": "https://sodatsu-mitsumori.net/privacy/",
+        "termsOfServiceURL": "https://sodatsu-mitsumori.net/terms/",
+        "defaultPrompt": [
+          "品目マスターを確認して、見積書の作成を手伝ってください。",
+          "この見積書をもとに請求書を作成してください。",
+          "この書類のPDFと共有URLを取得してください。"
+        ],
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

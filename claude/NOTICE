@@ -1,0 +1,12 @@
+License scope
+
+The MIT license applies to the connection configurations, skills, plugin and
+marketplace metadata, and documentation distributed in this repository or package.
+
+Product names and logo images (assets/logo.png) are excluded from the MIT license.
+Their existing rights remain with their respective owners. No trademark rights
+are granted by the MIT license.
+
+The private Sodatsu Mitsumori application and MCP server source code are not
+included and are not licensed by this distribution. Use of the hosted service
+remains subject to its own terms.

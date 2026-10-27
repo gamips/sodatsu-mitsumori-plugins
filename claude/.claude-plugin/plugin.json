@@ -1,0 +1,14 @@
+{
+  "name": "sodatsu-mitsumori",
+  "version": "0.1.0",
+  "description": "Create and edit quotes and invoices in Sodatsu Mitsumori, retrieve PDFs and share links, and work with your item catalog and settings.",
+  "author": {
+    "name": "株式会社ガミ",
+    "email": "customer@sodatsu-mitsumori.net",
+    "url": "https://sodatsu-mitsumori.net/aboutus/"
+  },
+  "homepage": "https://sodatsu-mitsumori.net/features/external-ai-mcp/",
+  "repository": "https://github.com/gamips/sodatsu-mitsumori-plugins",
+  "license": "MIT",
+  "displayName": "育つ見積"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "sodatsu-mitsumori-plugins",
+  "owner": {
+    "name": "株式会社ガミ"
+  },
+  "plugins": [
+    {
+      "name": "sodatsu-mitsumori",
+      "source": "./claude"
+    }
+  ]
+}
