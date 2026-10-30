@@ -11,14 +11,17 @@
 | `openai/` | Codex・ChatGPT向けAgent Plugins形式 |
 | `claude/` | Claude向けプラグイン形式 |
 
-[リリース](https://github.com/gamips/sodatsu-mitsumori-plugins/releases)から両形式のZIPを取得できます。現時点では導入・審査用のプレビューです。JSONと配布ファイルの検証は済んでいますが、実クライアントでの導入・OAuth・操作確認と公式ディレクトリへの申請はこれからです。
+[リリース](https://github.com/gamips/sodatsu-mitsumori-plugins/releases)から両形式のZIPを取得できます。現時点では導入・審査用のプレビューです。Codexアプリ同梱CLIで導入し、別の作業フォルダーでも33スキルの認識を確認しました。プラグイン経由のOAuth接続、審査用アカウントでの操作確認、動画作成、掲載申請はこれからです。
+
+確認環境：Codexアプリ同梱CLI 0.165.0-alpha.1.2。
 
 ## Codexで試す
 
-対応するCodex CLIでは、次のコマンドで配布元を追加できます。その後、対応するデスクトップアプリのプラグイン画面から導入・接続を行います。
+プラグインに対応するCodex CLIでは、次のコマンドで配布元を追加し、プラグインを導入できます。導入後はMCP接続の認証状態を確認してください。
 
 ```sh
 codex plugin marketplace add gamips/sodatsu-mitsumori-plugins
+codex plugin add sodatsu-mitsumori@sodatsu-mitsumori-plugins
 ```
 
 クライアントやバージョンによる違いは、[OpenAIの導入手順](https://developers.openai.com/plugins/build/plugins#add-a-marketplace-from-the-cli)を確認してください。
