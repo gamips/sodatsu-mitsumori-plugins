@@ -11,7 +11,7 @@
 | `openai/` | Codex・ChatGPT向けAgent Plugins形式 |
 | `claude/` | Claude向けプラグイン形式 |
 
-[リリース](https://github.com/gamips/sodatsu-mitsumori-plugins/releases)から両形式のZIPを取得できます。現時点では導入・審査用のプレビューです。Codexアプリ同梱CLIで導入し、別の作業フォルダーでも33スキルの認識を確認しました。プラグイン経由のOAuth接続、審査用アカウントでの操作確認、動画作成、掲載申請はこれからです。
+[リリース](https://github.com/gamips/sodatsu-mitsumori-plugins/releases)から両形式のZIPを取得できます。現時点では導入・審査用のプレビューです。Codexアプリ同梱CLIで導入と33スキルの認識を確認し、プラグイン経由ではゲスト・専用審査アカウントのOAuth接続と、審査アカウントでの設定・品目マスターの読み取りを検証しました。書類作成を含む審査ケース全体、AIによる操作確認、動画作成、掲載申請はこれからです。
 
 確認環境：Codexアプリ同梱CLI 0.165.0-alpha.1.2。
 
