@@ -14,7 +14,8 @@ description: "依頼内容に基づき見積書(documentType=quote)を作成し�
 Guide workflow: `quote`
 
 1. get_settingsで設定を確認し、単価表の参照が必要な場合のみlist_price_list_itemsを取得したうえで、create_documentをdocumentType=quoteで実行する。
-2. PDFファイルの取得・添付だけなら共有URLを発行せず、get_document_pdf / generate_document_pdfとprivateDownload手順で取得する。それ以外は保存後にcreate_document_share_urlをgenerateIfMissing=trueで呼び共有URLを取得する。
-3. PDF作成中はサーバーのguidanceに従い、完了前に再作成しない。入力内容に不明点がなければ余計な再確認はせず、共通取得元の情報は再利用してよいが、依頼のない書類は作成しない。
+2. 備考を生成するときはget_agent_instructionsのrules.quoteに従い、顧客に必要な対象範囲・実費・追加相談条件を簡潔にまとめる。ユーザー指定の備考やテンプレートの固有条件は保持する。
+3. PDFファイルの取得・添付だけなら共有URLを発行せず、get_document_pdf / generate_document_pdfとprivateDownload手順で取得する。それ以外は保存後にcreate_document_share_urlをgenerateIfMissing=trueで呼び共有URLを取得する。
+4. PDF作成中はサーバーのguidanceに従い、完了前に再作成しない。入力内容に不明点がなければ余計な再確認はせず、共通取得元の情報は再利用してよいが、依頼のない書類は作成しない。
 
 MCP tools: `get_settings`, `list_price_list_items`, `create_document`, `create_document_share_url`, `get_document_pdf`

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sodatsu-mitsumori",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create and edit quotes and invoices in Sodatsu Mitsumori, retrieve PDFs and share links, and work with your item catalog and settings.",
   "author": {
     "name": "株式会社ガミ",
