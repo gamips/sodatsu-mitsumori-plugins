@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sodatsu-mitsumori",
-  "version": "0.1.1",
-  "description": "Create and edit quotes and invoices in Sodatsu Mitsumori, retrieve PDFs and share links, and work with your item catalog and settings.",
+  "version": "0.1.2",
+  "description": "Create and edit quotes and invoices in Sodatsu Mitsumori, retrieve PDFs and share links, and work with your business partners, item catalog, and settings.",
   "author": {
     "name": "株式会社ガミ",
     "email": "customer@sodatsu-mitsumori.net",
@@ -16,13 +16,14 @@
       "interface": {
         "displayName": "育つ見積",
         "shortDescription": "育つ見積で見積書・請求書を作成・編集",
-        "longDescription": "育つ見積に接続して、見積書・請求書などを作成・編集できます。PDFや共有URLの取得、品目マスターや設定の操作にも対応しています。",
+        "longDescription": "育つ見積に接続して、見積書・請求書などを作成・編集できます。PDFや共有URLの取得、取引先・品目マスターや設定の操作にも対応しています。",
         "developerName": "株式会社ガミ",
         "category": "Productivity",
         "capabilities": [
           "書類の作成・編集",
           "PDF取得",
           "共有URL",
+          "取引先マスター",
           "品目マスター",
           "設定"
         ],
