@@ -11,16 +11,10 @@
 | フォルダ | 形式 |
 | --- | --- |
 | `openai/` | Codex・ChatGPT向けAgent Plugins形式 |
-| `claude/` | Claude向けプラグイン形式 |
+| [`claude/`](claude/README.md) | Claude Code向けプラグインと導入ガイド |
 | `antigravity/` | Antigravity向けプラグイン形式 |
 
-[リリース](https://github.com/gamips/sodatsu-mitsumori-plugins/releases)から各形式のZIPを取得できます。
-
-Preview v0.1.1では、接続設定と33スキルをMITライセンスで配布しました。現行カタログの見積作成時の備考案内を反映し、Codexでの導入、全スキルの一致・有効化、既存OAuthによる接続と41ツールの認識を確認しました。
-
-見積作成・請求書への変換・PDFの確認はv0.1.0で実施済みです。v0.1.1での全書類操作の再確認、モデルによる判断、AIクライアントへのPDF添付、動画、全8ケースの確認、公式申請・審査・掲載は未完了です。
-
-確認環境：Codexアプリ同梱CLI 0.165.0-alpha.1.2。
+[リリース一覧](https://github.com/gamips/sodatsu-mitsumori-plugins/releases)から、利用するクライアントに対応したZIPを取得できます。
 
 ## Codexで試す
 
@@ -33,23 +27,18 @@ codex plugin add sodatsu-mitsumori@sodatsu-mitsumori-plugins
 
 クライアントやバージョンによる違いは、[OpenAIの導入手順](https://developers.openai.com/plugins/build/plugins#add-a-marketplace-from-the-cli)を確認してください。
 
-## Claudeで試す
+## Claude Codeで使う
 
-Claude Codeでは次のコマンドで配布元を追加し、プラグインを導入します。
+Claude Codeから育つ見積に接続し、見積書・請求書などを作成できます。保存済みの書類の検索や、PDF・共有URLの取得にも使えます。株式会社ガミのGitHub配布元からインストールできます。
+
+Claude Codeのセッションで次のコマンドを1行ずつ実行します。
 
 ```text
 /plugin marketplace add gamips/sodatsu-mitsumori-plugins
 /plugin install sodatsu-mitsumori@sodatsu-mitsumori-plugins
 ```
 
-利用するClaudeアプリの対応状況は、[Claudeの配布ガイド](https://code.claude.com/docs/en/plugin-marketplaces)を確認してください。
-
-インストール済みのプラグインは、Claude Codeを起動する前にターミナルで更新できます。
-
-```sh
-claude plugin marketplace update sodatsu-mitsumori-plugins
-claude plugin update sodatsu-mitsumori@sodatsu-mitsumori-plugins
-```
+インストール後は `/mcp` で育つ見積のアカウントに接続します。認証の手順、依頼の例、更新方法は[Claude Code向けの使い方](claude/README.md)をご覧ください。
 
 ## Antigravityで試す
 

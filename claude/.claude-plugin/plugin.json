@@ -1,7 +1,7 @@
 {
   "name": "sodatsu-mitsumori",
-  "version": "0.1.3",
-  "description": "Create and edit quotes and invoices in Sodatsu Mitsumori, retrieve PDFs and share links, and work with your business partners, item catalog, and settings.",
+  "version": "0.1.4",
+  "description": "Claude Codeから育つ見積に接続し、見積書・請求書・納品書・発注書を作成できます。保存済みの書類を検索し、PDFや共有URLも取得できます。",
   "author": {
     "name": "株式会社ガミ",
     "email": "customer@sodatsu-mitsumori.net",

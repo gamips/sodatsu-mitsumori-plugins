@@ -3,7 +3,7 @@
   "owner": {
     "name": "株式会社ガミ"
   },
-  "description": "Create and edit quotes and invoices in Sodatsu Mitsumori, retrieve PDFs and share links, and work with your business partners, item catalog, and settings.",
+  "description": "Claude Codeから育つ見積に接続し、見積書・請求書・納品書・発注書を作成できます。保存済みの書類を検索し、PDFや共有URLも取得できます。",
   "plugins": [
     {
       "name": "sodatsu-mitsumori",
