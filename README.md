@@ -12,8 +12,9 @@
 | --- | --- |
 | `openai/` | Codex・ChatGPT向けAgent Plugins形式 |
 | `claude/` | Claude向けプラグイン形式 |
+| `antigravity/` | Antigravity向けプラグイン形式 |
 
-[リリース](https://github.com/gamips/sodatsu-mitsumori-plugins/releases)から両形式のZIPを取得できます。
+[リリース](https://github.com/gamips/sodatsu-mitsumori-plugins/releases)から各形式のZIPを取得できます。
 
 Preview v0.1.1では、接続設定と33スキルをMITライセンスで配布しました。現行カタログの見積作成時の備考案内を反映し、Codexでの導入、全スキルの一致・有効化、既存OAuthによる接続と41ツールの認識を確認しました。
 
@@ -42,6 +43,22 @@ Claude Codeでは次のコマンドで配布元を追加し、プラグインを
 ```
 
 利用するClaudeアプリの対応状況は、[Claudeの配布ガイド](https://code.claude.com/docs/en/plugin-marketplaces)を確認してください。
+
+インストール済みのプラグインは、Claude Codeを起動する前にターミナルで更新できます。
+
+```sh
+claude plugin marketplace update sodatsu-mitsumori-plugins
+claude plugin update sodatsu-mitsumori@sodatsu-mitsumori-plugins
+```
+
+## Antigravityで試す
+
+```sh
+git clone https://github.com/gamips/sodatsu-mitsumori-plugins.git
+agy plugin install ./sodatsu-mitsumori-plugins/antigravity
+```
+
+Antigravity向けパッケージは `agy plugin validate --strict` を通過しています。AntigravityからのOAuth接続は未確認です。
 
 ## 利用とライセンス
 

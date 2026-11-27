@@ -1,0 +1,21 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "sodatsu-mitsumori",
+  "version": "0.1.3",
+  "description": "Create and edit quotes and invoices in Sodatsu Mitsumori, retrieve PDFs and share links, and work with your business partners, item catalog, and settings.",
+  "author": {
+    "name": "株式会社ガミ",
+    "email": "customer@sodatsu-mitsumori.net",
+    "url": "https://sodatsu-mitsumori.net/aboutus/"
+  },
+  "homepage": "https://sodatsu-mitsumori.net/features/external-ai-mcp/",
+  "repository": "https://github.com/gamips/sodatsu-mitsumori-plugins",
+  "license": "MIT",
+  "displayName": "育つ見積",
+  "logo": "assets/logo.png",
+  "suggestedPrompts": [
+    "品目マスターを確認して、見積書の作成を手伝ってください。",
+    "この見積書をもとに請求書を作成してください。",
+    "この書類のPDFと共有URLを取得してください。"
+  ]
+}

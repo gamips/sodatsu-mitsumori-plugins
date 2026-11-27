@@ -13,10 +13,13 @@ description: "依頼内容に基づき見積書(documentType=quote)を作成し�
 
 Guide workflow: `quote`
 
-1. get_settingsで設定を確認し、単価表の参照が必要な場合のみlist_price_list_itemsを取得したうえで、create_documentをdocumentType=quoteで実行する。
+1. get_settingsで発行者と書類の既定設定、athanorItemMasterMode（登録品目の重視度）、athanorPastQuoteReferenceMode（過去見積の参照度）を確認する。品目モードに応じてlist_price_list_itemsで登録単価を調べる。過去見積を使わない設定では、本人が今回参照を求めた場合だけ過去見積を開く。
 2. 書類の宛先は利用可能ならlist_business_partnersで照合する。未登録なら「次回も使えるよう、取引先に登録しますか？」と一度尋ねる。候補が曖昧なら正式名や支店で確認する。登録・今回限りの希望が明示済みなら聞き直さず、書類作成だけを理由にマスタを変更しない。
-3. 備考を生成するときはget_agent_instructionsのrules.quoteに従い、顧客に必要な対象範囲・実費・追加相談条件を簡潔にまとめる。ユーザー指定の備考やテンプレートの固有条件は保持する。
-4. PDFファイルの取得・添付だけなら共有URLを発行せず、get_document_pdf / generate_document_pdfとprivateDownload手順で取得する。共有希望時は保存後にcreate_document_share_urlをgenerateIfMissing=trueで呼び共有URLを取得する。
-5. PDF作成中はサーバーのguidanceに従い、完了前に再作成しない。入力内容に不明点がなければ余計な再確認はせず、共通取得元の情報は再利用してよいが、依頼のない書類は作成しない。
+3. 前回の見積や似た事例が手掛かりになる場合は、list_documentsのdocumentTypeをquoteにし、queryに取引先名・件名・品目名のいずれかを指定する。選んだ見積の詳細はget_documentにdocumentIdを渡して読む。
+4. 業種の見積型を使う了承がある場合は、業種と今回の提供物をlist_estimate_patternsのqueryに指定し、適合する候補のpatternIdでget_estimate_patternを読む。案件に合う構成だけを使う。
+5. 今回の依頼範囲・数量・単価を優先して明細をまとめ、create_documentをdocumentType=quoteで実行する。
+6. 備考を生成するときはget_agent_instructionsのrules.quoteに従い、顧客に必要な対象範囲・実費・追加相談条件を簡潔にまとめる。ユーザー指定の備考やテンプレートの固有条件は保持する。
+7. PDFファイルの取得・添付だけなら共有URLを発行せず、get_document_pdf / generate_document_pdfとprivateDownload手順で取得する。共有希望時は保存後にcreate_document_share_urlをgenerateIfMissing=trueで呼び共有URLを取得する。
+8. PDF作成中はサーバーのguidanceに従い、完了前に再作成しない。入力内容に不明点がなければ余計な再確認はせず、共通取得元の情報は再利用してよいが、依頼のない書類は作成しない。
 
-MCP tools: `get_settings`, `list_business_partners`, `list_price_list_items`, `create_document`, `create_document_share_url`, `get_document_pdf`
+MCP tools: `get_settings`, `list_business_partners`, `list_price_list_items`, `list_documents`, `get_document`, `list_estimate_patterns`, `get_estimate_pattern`, `create_document`, `create_document_share_url`, `get_document_pdf`

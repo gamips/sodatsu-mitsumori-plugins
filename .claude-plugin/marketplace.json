@@ -3,6 +3,7 @@
   "owner": {
     "name": "株式会社ガミ"
   },
+  "description": "Create and edit quotes and invoices in Sodatsu Mitsumori, retrieve PDFs and share links, and work with your business partners, item catalog, and settings.",
   "plugins": [
     {
       "name": "sodatsu-mitsumori",

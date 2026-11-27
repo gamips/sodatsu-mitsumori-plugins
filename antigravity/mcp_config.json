@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "sodatsu-mitsumori": {
+      "serverUrl": "https://app.sodatsu-mitsumori.net/api/mcp"
+    }
+  }
+}
